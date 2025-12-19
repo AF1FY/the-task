@@ -11,4 +11,14 @@ export const taskSchema = z.object({
     status: z.enum(['To Do', 'In Progress', 'Done']),
 });
 
+export const projectSchema = z.object({
+    title: z.string()
+        .min(3, 'Title must be at least 3 characters long')
+        .max(25, 'Title must be at most 25 characters long'),
+    description: z.string()
+        .min(10, 'Description must be at least 10 characters long')
+        .max(70, 'Description must be at most 70 characters long'),
+});
+
 export type TaskFormValues = z.infer<typeof taskSchema>;
+export type ProjectFormValues = z.infer<typeof projectSchema>;

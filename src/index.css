@@ -2,10 +2,8 @@
 
 @variant dark (&:where(.dark, .dark *));
 
-/* تنسيقات عامة (اختياري) */
 @layer base {
   body {
-    /* ده بيخلي الخطوط أنعم وأشيك */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
