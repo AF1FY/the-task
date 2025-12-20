@@ -22,7 +22,7 @@ const AddProject: React.FC = () => {
     const mutation = useMutation({
         mutationFn: addProjectAsync,
         onSuccess: async () => {
-            await queryClient.invalidateQueries({ queryKey: ['projects'] }); //! refresh
+            await queryClient.invalidateQueries({ queryKey: ['projects'] }); //* refresh
             navigate('/');
         },
     });

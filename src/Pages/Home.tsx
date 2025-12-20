@@ -21,7 +21,7 @@ const Home = () => {
         <Link to={'add-project'} className='rounded-2xl bg-dodger-blue text-white py-1.5 px-2.5 hover:shadow-lg hover:-translate-y-1 transition-all duration-200'>Add Project</Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 my-6">
-        {isLoading ? <></> : data?.map(p => <ProjectCard project={p} />)}
+        {isLoading ? <></> : data?.map(p => <ProjectCard project={p} key={p.id} />)}
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z, type TypeOf } from 'zod';
 
 export const taskSchema = z.object({
     title: z.string()
@@ -20,5 +20,10 @@ export const projectSchema = z.object({
         .max(70, 'Description must be at most 70 characters long'),
 });
 
+export const searchSchema = z.object({
+    search: z.string().optional(),
+})
+
+export type SearchForm = z.infer<typeof searchSchema>;
 export type TaskFormValues = z.infer<typeof taskSchema>;
 export type ProjectFormValues = z.infer<typeof projectSchema>;
