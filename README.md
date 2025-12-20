@@ -21,9 +21,8 @@ A modern, responsive Task Management Dashboard built with React, TypeScript, and
 Install dependencies
 ```
 npm install
-```bash
-
+```
 Run the development server
 ```
 npm run dev
-```bash
+```
